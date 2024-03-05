@@ -1,0 +1,198 @@
+<div class="container">
+  <!-- MAIN -->
+  <div class="main_container">
+    <img
+      class="main_image"
+      src="../../../assets/images/espaco/espaco_exemplo.jpeg"
+      alt=""
+    />
+    <label class="main_title" *transloco="let t">
+      {{ t("dashboard.welcome") }}
+    </label>
+    <label class="main_description" *transloco="let t">
+      {{ t("dashboard.favorite") }}
+    </label>
+  </div>
+  <!-- QUALIDADE -->
+  <div class="qualidade">
+    <h1 class="qualidade_title" *transloco="let t">
+      {{ t("dashboard.explore") }}
+    </h1>
+    <p class="qualidade_text" *transloco="let t">{{ t("dashboard.words") }}</p>
+    <button
+      class="qualidade_button"
+      mat-raised-button
+      color="basic"
+      routerLink="/espaco"
+    >
+      <span class="button_text" *transloco="let t">{{
+        t("header.space")
+      }}</span>
+    </button>
+  </div>
+  <!-- OBJETIVOS DO ESPAÇO -->
+  <div class="container_objetivos">
+    <h1 class="objetivos" *transloco="let t">{{ t("dashboard.corporate") }}</h1>
+    <h1 class="objetivos" *transloco="let t">{{ t("dashboard.wedding") }}</h1>
+    <h1 class="objetivos" *transloco="let t">
+      {{ t("dashboard.graduation") }}
+    </h1>
+    <h1 class="objetivos" *transloco="let t">{{ t("dashboard.family") }}</h1>
+    <h1 class="objetivos" *transloco="let t">{{ t("dashboard.birthday") }}</h1>
+  </div>
+
+  <!-- CARDS EXPERIENCIA -->
+  <div class="title_card">
+    <h1 class="cards_title" *transloco="let t">
+      {{ t("dashboard.experience") }}
+    </h1>
+  </div>
+  <div class="card">
+    <div class="example-card p-a">
+      <h1 class="card_title" *transloco="let t">
+        <img src="../../../assets/images/icons/local.png" class="icone" />{{
+          t("dashboard.localization")
+        }}
+      </h1>
+      <h3 class="card_description" *transloco="let t">
+        {{ t("dashboard.localization_text") }}
+      </h3>
+    </div>
+    <div class="example-card s-a">
+      <div>
+        <h1 class="card_title" *transloco="let t">
+          <img src="../../../assets/images/icons/empresa.png" class="icone" />{{
+            t("dashboard.capacity")
+          }}
+        </h1>
+        <h3 class="card_description" *transloco="let t">
+          {{ t("dashboard.capacity_text") }}
+        </h3>
+      </div>
+    </div>
+    <div class="example-card t-a">
+      <div>
+        <h1 class="card_title" *transloco="let t">
+          <img
+            src="../../../assets/images/icons/estrutura.png"
+            class="icone"
+          />{{ t("dashboard.confort") }}
+        </h1>
+        <h3 class="card_description" *transloco="let t">
+          {{ t("dashboard.confort_text") }}
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARDS BUFFET -->
+
+  <div class="buffet">
+    <h1 class="buffet_title" *transloco="let t">
+      {{ t("dashboard.cardapio_title") }}
+    </h1>
+  </div>
+  <div class="buffet_card">
+    <div class="example-buffet-card p-m">
+      <div class="card_buffet_title">
+        <h1 class="buffet_card_title" *transloco="let t">
+          {{ t("dashboard.tCardapio") }}
+        </h1>
+      </div>
+      <div class="divider">ㅤ</div>
+      <div class="buffet_description">
+        <h3 *transloco="let t">
+          {{ t("dashboard.tCardapio_item1") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.tCardapio_item2") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.tCardapio_item3") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.tCardapio_item4") }}
+        </h3>
+      </div>
+      <button class="buffet_button" mat-stroked-button color="basic">
+        <span class="buffet_button_text" *transloco="let t">{{
+          t("footer.quote")
+        }}</span>
+      </button>
+    </div>
+
+    <div class="example-buffet-card s-m">
+      <div class="card_buffet_title">
+        <h1 class="buffet_card_title" *transloco="let t">
+          {{ t("dashboard.eCardapio") }}
+        </h1>
+        <img src="../../../assets/images/icons/tradicional.png" class="icone" />
+      </div>
+      <div class="divider">ㅤ</div>
+      <div class="buffet_description">
+        <h3 *transloco="let t">
+          {{ t("dashboard.eCardapio_item1") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.eCardapio_item2") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.eCardapio_item3") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.eCardapio_item4") }}
+        </h3>
+      </div>
+      <button class="buffet_button" mat-stroked-button color="basic">
+        <span class="buffet_button_text" *transloco="let t">{{
+          t("footer.quote")
+        }}</span>
+      </button>
+    </div>
+
+    <div class="example-buffet-card t-m">
+      <div class="card_buffet_title">
+        <h1 class="buffet_card_title" *transloco="let t">
+          {{ t("dashboard.pCardapio") }}
+        </h1>
+        <img src="../../../assets/images/icons/premium.png" class="icone" />
+      </div>
+      <div class="divider">ㅤ</div>
+      <div class="buffet_description">
+        <h3 *transloco="let t">
+          {{ t("dashboard.pCardapio_item1") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.pCardapio_item2") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.pCardapio_item3") }}
+        </h3>
+        <h3 *transloco="let t">
+          {{ t("dashboard.pCardapio_item4") }}
+        </h3>
+      </div>
+      <div class="buffet_button">
+        <button class="buffet_button" mat-stroked-button color="basic">
+          <span class="buffet_button_text" *transloco="let t">{{
+            t("footer.quote")
+          }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="cardapios_container">
+      <div>
+        <h1 class="cardapios_title" *transloco="let t">
+          {{ t("dashboard.cardapios") }}
+        </h1>
+      </div>
+      <div>
+        <p class="cardapios_description" *transloco="let t">
+          {{ t("dashboard.comidas") }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

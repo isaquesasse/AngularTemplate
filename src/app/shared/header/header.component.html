@@ -1,0 +1,150 @@
+<header>
+  <mat-toolbar class="header">
+    <div class="menu">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon class="menu_icon">menu</mat-icon>
+      </button>
+      <mat-menu yPosition="below" xPosition="before" #menu="matMenu">
+        <button
+          class="menu_item"
+          mat-menu-item
+          routerLink="/dashboard"
+          *ngIf="!isRouteActive('/dashboard')"
+        >
+          Home
+        </button>
+        <button
+          class="menu_item"
+          mat-menu-item
+          routerLink="/quem-somos"
+          *ngIf="!isRouteActive('/quem-somos')"
+        >
+          <span *transloco="let t">{{ t("header.about") }}</span>
+        </button>
+        <button
+          class="menu_item"
+          mat-menu-item
+          routerLink="/espaco"
+          *ngIf="!isRouteActive('/espaco')"
+        >
+          <span *transloco="let t">{{ t("header.space") }}</span>
+        </button>
+        <button class="menu_item" mat-menu-item (click)="openLinks()">
+          <span *transloco="let t">{{ t("header.contact") }}</span>
+        </button>
+      </mat-menu>
+    </div>
+    <div class="expansion_panel"></div>
+    <div class="container container_title">
+      <h1 class="title">Eventos</h1>
+    </div>
+    <div class="botões">
+      <!-- DASHBOARD -->
+      <!-- TRUE -->
+      <button
+        *ngIf="isRouteActive('/dashboard')"
+        class="button_active"
+        mat-stroked-button
+        disabled
+        routerLink="/dashboard"
+      >
+        <span class="active_text">Home</span>
+      </button>
+      <!-- FALSE -->
+      <button
+        *ngIf="!isRouteActive('/dashboard')"
+        class="button"
+        mat-stroked-button
+        color="basic"
+        routerLink="/dashboard"
+      >
+        <span class="button_text">Home</span>
+      </button>
+
+      <!-- QUEM SOMOS -->
+      <!-- TRUE -->
+      <button
+        *ngIf="isRouteActive('/quem-somos')"
+        class="button_active"
+        mat-stroked-button
+        disabled
+        routerLink="/quem-somos"
+      >
+        <span class="active_text" *transloco="let t">{{
+          t("header.about")
+        }}</span>
+      </button>
+      <!-- FALSE -->
+      <button
+        *ngIf="!isRouteActive('/quem-somos')"
+        class="button"
+        mat-stroked-button
+        color="basic"
+        routerLink="/quem-somos"
+      >
+        <span class="button_text" *transloco="let t">{{
+          t("header.about")
+        }}</span>
+      </button>
+
+      <!-- ESPAÇO -->
+      <!-- TRUE -->
+      <button
+        *ngIf="isRouteActive('/avaliacoes')"
+        class="button_active"
+        mat-stroked-button
+        disabled
+        routerLink="/avaliacoes"
+      >
+        <span class="active_text" *transloco="let t">{{
+          t("header.space")
+        }}</span>
+      </button>
+      <!-- FALSE -->
+      <button
+        *ngIf="!isRouteActive('/avaliacoes')"
+        class="button"
+        mat-stroked-button
+        color="basic"
+        routerLink="/avaliacoes"
+      >
+        <span class="button_text" *transloco="let t">{{
+          t("header.space")
+        }}</span>
+      </button>
+
+      <!-- CONTATOS -->
+      <button class="button" mat-stroked-button (click)="openLinks()">
+        <span class="button_text" *transloco="let t">{{
+          t("header.contact")
+        }}</span>
+      </button>
+
+      <!-- ORÇAMENTO -->
+      <button class="button_orcamento" color="basic" mat-button>
+        <span class="text_orcamento" *transloco="let t">{{
+          t("header.quote")
+        }}</span>
+      </button>
+    </div>
+    <!-- Mudar linguagem -->
+    <div class="container lingua">
+      <button mat-icon-button (click)="changeLanguage()">
+        <ng-container *ngIf="translocoService.getActiveLang() === 'pt-br'">
+          <img
+            class="lingua_icon"
+            src="../../../../assets/images/bandeiras/pt-br.png"
+            alt="BR Flag"
+          />
+        </ng-container>
+        <ng-container *ngIf="translocoService.getActiveLang() === 'en'">
+          <img
+            class="lingua_icon"
+            src="../../../../assets/images/bandeiras/en.png"
+            alt="EUA Flag"
+          />
+        </ng-container>
+      </button>
+    </div>
+  </mat-toolbar>
+</header>

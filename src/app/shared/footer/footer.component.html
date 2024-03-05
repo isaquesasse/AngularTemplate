@@ -1,0 +1,104 @@
+<footer>
+  <div class="footer">
+    <div class="footer_container">
+      <div class="footer_text">
+        <h1 *transloco="let t">{{ t("footer.title") }}</h1>
+        <h3 *transloco="let t">
+          {{ t("footer.text") }}
+        </h3>
+      </div>
+      <div class="footer_form">
+        <div class="footer_itens_form">
+          <mat-form-field appearance="outline">
+            <mat-label
+              ><span *transloco="let t">{{ t("footer.name") }}</span>
+            </mat-label>
+            <mat-icon matSuffix>person</mat-icon>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div class="footer_itens_form">
+          <mat-form-field appearance="outline" type="mail">
+            <mat-label><span *transloco="let t">Email</span></mat-label>
+            <input
+              placeholder="exemplo@email.com"
+              [formControl]="email"
+              matInput
+            />
+            <mat-icon matSuffix>email</mat-icon>
+            <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="footer_itens_form">
+          <mat-form-field appearance="outline">
+            <mat-label
+              ><span *transloco="let t">{{
+                t("footer.phone")
+              }}</span></mat-label
+            >
+            <input type="tel" matInput placeholder="12 93456-7890" />
+            <mat-icon matSuffix>phone</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="footer_itens_form">
+          <mat-form-field appearance="outline">
+            <mat-label
+              ><span *transloco="let t">{{
+                t("footer.select")
+              }}</span></mat-label
+            >
+            <mat-icon matSuffix>local_bar</mat-icon>
+            <mat-select>
+              <mat-option value="one" *transloco="let t">{{
+                t("footer.corporate")
+              }}</mat-option>
+              <mat-option value="two" *transloco="let t">{{
+                t("footer.wedding")
+              }}</mat-option>
+              <mat-option value="two" *transloco="let t">{{
+                t("footer.graduation")
+              }}</mat-option>
+              <mat-option value="two" *transloco="let t">{{
+                t("footer.family")
+              }}</mat-option>
+              <mat-option value="two" *transloco="let t">{{
+                t("footer.birthday")
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="footer_itens_form">
+          <mat-form-field appearance="outline">
+            <mat-label
+              ><span *transloco="let t">{{
+                t("footer.message")
+              }}</span></mat-label
+            >
+            <mat-icon matSuffix>chat</mat-icon>
+            <textarea matInput></textarea>
+          </mat-form-field>
+        </div>
+        <button class="button" mat-button color="basic">
+          <span class="button_text" *transloco="let t">{{
+            t("footer.quote")
+          }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="direitos_container">
+    <div>
+      <h1>Eventos</h1>
+      <p *transloco="let t">2023 © Eventos — {{ t("footer.rights") }}.</p>
+      <a class="link" routerLink="/avaliacoes">Política de Privacidade</a>
+    </div>
+    <div>
+      <p>
+        Desenvolvido por
+        <a class="link" href="https://www.instagram.com/isaque_sasse/"
+          >Isaque Sasse</a
+        >
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,1 +1,193 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap";
+
+:root {
+  /* Cores */
+  --cor-de-fundo: #ebecee;
+  --branco: #ffffff;
+  --laranja: #eb9b00;
+  --azul-degrade: linear-gradient(97.54deg, #002f52, #326589);
+  --azul-claro-degrade: linear-gradient(
+    97deg,
+    rgba(173, 216, 230) 0%,
+    rgb(144, 207, 228) 50%,
+    rgb(99, 191, 221) 100%
+  );
+  /* gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%); */
+  --azul-bg: linear-gradient(90deg, rgb(53, 183, 226), rgba(173, 216, 230));
+  --azul: rgba(173, 216, 230);
+  --azul-secundario: rgb(144, 207, 228);
+  --azul-terciario: rgb(99, 191, 221);
+  --azul-escuro: #002f52;
+  --marrom-degrade: linear-gradient(
+    97deg,
+    #c3a862 0%,
+    #ac9458 50%,
+    #8b7743 100%
+  );
+  --marrom: #c3a862;
+  --marrom-s: #ac9458;
+  --marrom-t: #8b7743;
+  --preto: #000000;
+  --cinza-claro: #858585;
+
+  /* Fontes */
+  --fonte-principal: "Poppins";
+  --fonte-secundaria: "Josefin Sans";
+}
+
+html,
+body {
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+@media (max-width: 450px) {
+  html,
+  body {
+    min-height: 100vh;
+    min-width: 140%;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--cor-de-fundo);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
